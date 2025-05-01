@@ -32,7 +32,23 @@
       hamburger.textContent = '☰';
     }
   }
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector("#navbar ul");
+    nav.classList.toggle("show");
+  }
+
+  // ✅ Close menu automatically when any nav link is clicked (only on mobile)
+  document.querySelectorAll("#navbar ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.querySelector("#navbar ul");
+      if (window.innerWidth <= 768) {
+        nav.classList.remove("show");
+      }
+    });
+  });
 </script>
+
 
 
 
@@ -47,8 +63,7 @@
     <div class="container header-flex">
       <div class="logo-section">
         <div class="logo">SANJEEV KUMAR</div>
-
-        <span class="logo-text">(TAX CONSULTANT) </span>
+        <span class="logo-text">(TAX CONSULTANT)</span>
       </div>
       <div class="hamburger" onclick="toggleMenu()">☰</div>
       <nav id="navbar">
@@ -61,6 +76,8 @@
         </ul>
       </nav>
     </div>
+  </header>
+  
    
  </header>
 
@@ -158,5 +175,22 @@
     </div>
   </footer>
 
-</body>
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector("#navbar ul");
+    nav.classList.toggle("show");
+  }
+
+  // Auto-close on nav click
+  document.querySelectorAll("#navbar ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+      const nav = document.querySelector("#navbar ul");
+      if (window.innerWidth <= 768) {
+        nav.classList.remove("show");
+      }
+    });
+  });
+</script>
+  </body>
 </html>
