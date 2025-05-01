@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjeev Kumar | Data Digitization</title>
+  <link rel="stylesheet" href="style.css" />
+  
+
+</head>
+<script>
+  let scrollPosition = 0;
+  function scrollGallery(direction) {
+    const track = document.getElementById('galleryTrack');
+    const imageWidth = track.querySelector('img').clientWidth + 20; // image + gap
+    scrollPosition += direction * imageWidth * 2;
+    scrollPosition = Math.max(0, Math.min(scrollPosition, track.scrollWidth - track.clientWidth));
+    track.style.transform = `translateX(-${scrollPosition}px)`;
+  }
+</script>
+<script>
+  function toggleMenu() {
+    const navList = document.querySelector('#navbar ul');
+    const hamburger = document.querySelector('.hamburger');
+
+    navList.classList.toggle('active');
+
+    // Change icon
+    if (navList.classList.contains('active')) {
+      hamburger.textContent = '✖';
+    } else {
+      hamburger.textContent = '☰';
+    }
+  }
+</script>
+
+
+
+
+
+
+
+
+ <body>
+
+  <header id="site-header">
+    <div class="container header-flex">
+      <div class="logo-section">
+        <div class="logo">SANJEEV KUMAR</div>
+
+        <span class="logo-text">(TAX CONSULTANT) </span>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+   
+ </header>
+
+  <section class="hero">
+    <h1>DATA DIGITIZATION (Authorized TIN FC)</h1>
+    <p>MANAGED BY NSDL (Income Tax Department)<br>Branch Code: 8301264</p>
+    <a href="#services" class="btn">View Services</a>
+  </section>
+
+  <section class="services-preview" id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>PAN & TAN</h3>
+        <p>Apply for new PAN/TAN or update details with professional guidance.</p>
+      </div>
+      <div class="card">
+        <h3>GST Registration & Return Filing</h3>
+        <p>Complete GST services from registration to monthly/quarterly and Annual return filing.</p>
+      </div>
+      <div class="card">
+        <h3>Income Tax Return Filing</h3>
+        <p>Accurate and timely filing of your ITR for individuals, firms, and businesses.</p>
+      </div>
+      <div class="card">
+        <h3>e-TDS, TCS, SFT & 24G Return Filing</h3>
+        <p>Electronic TDS, TCS ,SFT & 24G returns for all types of deductors.</p>
+      </div>
+      <div class="card">
+        <h3>Udyam Registration</h3>
+        <p>Register your MSME with ease and receive government benefits.</p>
+      </div>
+      <div class="card">
+        <h3>PTAX Registration</h3>
+        <p>Professional Tax registration and compliance for businesses and professionals.</p>
+      </div>
+      <div class="card">
+        <h3>Balance Sheet & Bank Proposal</h3>
+        <p>Get professionally prepared balance sheets and project reports for loans.</p>
+      </div>
+      <div class="card">
+        <h3>E-TAX Payment</h3>
+        <p>Pay all your government dues online including Income Tax, TDS, and more.</p>
+      </div>
+      <div class="card">
+        <h3>26QB Return</h3>
+        <p>File 26QB returns for TDS on sale of property.</p>
+      </div>
+      <div class="card">
+        <h3>TDS Certificate</h3>
+        <p>Generate and validate Form 16/16A certificates efficiently.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="container" style="padding: 50px 20px;">
+    <h2>About Us</h2>
+    <p style="max-width: 800px; margin-top: 20px;">
+      At Data Digitization, we offer comprehensive tax consulting and compliance services, managed by Sanjeev Kumar, an authorized TIN-FC by NSDL. With years of experience in Taxation Services and financial documentation, we strive to provide transparent, reliable, and timely service to our clients.
+    </p>
+  </section>
+  <section id="gallery" class="gallery-section container">
+    <h2>Gallery</h2>
+    <div class="gallery-wrapper">
+      <button class="gallery-btn left" onclick="scrollGallery(-1)">&#8592;</button>
+      <div class="gallery-track" id="galleryTrack">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+        <img src="68ce3c15-6efe-4090-bed0-d5197714091c.png" alt="Gallery Image 1">
+
+      </div>
+      <button class="gallery-btn right" onclick="scrollGallery(1)">&#8594;</button>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="container" style="padding: 50px 20px;">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Ward No. 27,Tara Nagar, Near Kusum Jewellers, Chas, Bokaro, Jharkhand 827013</p>
+    <p><strong>Hours:</strong> Open 10 AM to 8 PM (Sunday Closed)</p>
+    <p><strong>Phone:</strong> (+91) 9835551612</p>
+    <p><strong>Email:</strong> Sanjeevchas@gmail.com</p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Sanjeev Kumar | Data Digitization. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
