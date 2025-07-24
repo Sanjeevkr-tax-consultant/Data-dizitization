@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sanjeev Kumar | Data Digitization</title>
+   <link rel="icon" href="a2.png"image/png">
   <link rel="stylesheet" href="style.css" />
   
 
@@ -167,6 +168,9 @@
     <p><strong>Hours:</strong> Open 10 AM to 8 PM (Sunday Closed)</p>
     <p><strong>Phone:</strong> (+91) 9835551612</p>
     <p><strong>Email:</strong> Sanjeevchas@gmail.com</p>
+    <a href="https://wa.me/919835551612" class="whatsapp-button" target="_blank">💬 Chat on WhatsApp</a>
+      <button class="copy-btn" onclick="copyPhoneNumber()">📋 Copy Phone Number</button>
+<span id="copy-msg" class="copy-message">Copied!</span>
   </section>
 
   <footer>
@@ -191,6 +195,16 @@
       }
     });
   });
+    function copyPhoneNumber() {
+    const phone = "+919835551612";
+    navigator.clipboard.writeText(phone).then(() => {
+      const msg = document.getElementById("copy-msg");
+      msg.style.opacity = 1;
+      setTimeout(() => {
+        msg.style.opacity = 0;
+      }, 1500);
+    });
+  }
 </script>
   </body>
 </html>
