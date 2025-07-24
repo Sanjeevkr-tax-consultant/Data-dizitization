@@ -669,6 +669,55 @@ section {
     text-align: right;
   }
 }
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  font-weight: bold;
+}
+
+.copy-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: 0.3s ease-in-out;
+}
+
+.copy-btn:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+.copy-message {
+  margin-left: 10px;
+  font-size: 0.9rem;
+  color: green;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.map-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
 
 
 
